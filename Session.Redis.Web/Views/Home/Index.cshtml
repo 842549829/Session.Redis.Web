@@ -1,0 +1,9 @@
+﻿<form method="post" action="../Home/Add">
+    <div>
+        <input name="username" id="username" type="text" value="@ViewData["UserName"]" />
+        <input name="pwd" id="pwd" type="text" value="" />
+        <input type="submit" value="更新" />
+        <h1>提交用户名称为：@ViewData["UserName"]    密码：@ViewData["PassWord"]</h1>
+        <a href="javascript:void(0);" onclick="window.location.reload();">刷新显示最新值</a>
+    </div>
+</form>
