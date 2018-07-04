@@ -28,7 +28,7 @@ namespace Session.Redis.Web
         public void ConfigureServices(IServiceCollection services)
         {
             #region 注册HttpContext
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddHttpContextAccessor();
             #endregion
 
             #region 使用Redis保存Session

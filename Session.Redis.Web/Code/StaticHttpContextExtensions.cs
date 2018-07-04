@@ -14,15 +14,6 @@ namespace Session.Redis.Web.Code
     public static class StaticHttpContextExtensions
     {
         /// <summary>
-        /// AddHttpContextAccessor
-        /// </summary>
-        /// <param name="services">services</param>
-        public static void AddHttpContextAccessor(this IServiceCollection services)
-        {
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-        }
-
-        /// <summary>
         /// UseStaticHttpContext
         /// </summary>
         /// <param name="app">app</param>
