@@ -26,8 +26,14 @@ namespace Session.Redis.Web.Controllers
         [HttpPost]
         public NoContentResult Add(string userName, string pwd)
         {
-            this.HttpContext.Session.SetString("UserName", userName);
-            this.HttpContext.Session.SetString("PassWord", pwd);
+            if (!string.IsNullOrWhiteSpace(userName))
+            {
+                this.HttpContext.Session.SetString("UserName", userName);
+            }
+            if (!string.IsNullOrWhiteSpace(pwd))
+            {
+                this.HttpContext.Session.SetString("PassWord", pwd);
+            }
             return NoContent();
         }
     }
